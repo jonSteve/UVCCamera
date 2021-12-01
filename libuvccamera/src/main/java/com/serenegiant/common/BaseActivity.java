@@ -25,13 +25,14 @@ package com.serenegiant.common;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -44,7 +45,7 @@ import com.serenegiant.utils.PermissionCheck;
  * Created by saki on 2016/11/18.
  *
  */
-public class BaseActivity extends AppCompatActivity
+public class BaseActivity extends FragmentActivity
 	implements MessageDialogFragmentV4.MessageDialogListener {
 
 	private static boolean DEBUG = false;	// FIXME 実働時はfalseにセットすること

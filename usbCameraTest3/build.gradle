@@ -46,6 +46,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
         }
     }
+	repositories {
+		flatDir {
+			dirs 'libs'   // aar目录
+		}
+	}
 }
 
 dependencies {
@@ -59,4 +64,7 @@ dependencies {
 	}
 	implementation project(':libuvccamera')
 	implementation project(':usbCameraCommon')
+	implementation(name: 'Fascan_v2.0.0-beta_3_22', ext: 'aar')
+	implementation 'com.android.support:appcompat-v7:27.1.1'
+	implementation 'com.android.support.constraint:constraint-layout:2.0.4'
 }
